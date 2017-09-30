@@ -34,10 +34,21 @@ class MainActivity : AppCompatActivity() {
     fun findAge(view: View) {
 
         // Fetch data of birth from input
-        val dob:Int = dob.text.toString().toInt()
+        val yob:Int = yob.text.toString().toInt()
+
+        // Current year
+        val cur:Int = Calendar.getInstance().get(Calendar.YEAR)
+
+        // Check if year is valid
+        if (yob > cur) {
+
+            ageView.text = "Your year of birth is invalid"
+            return
+
+        }
 
         // Compute user's age
-        val age:Int = Calendar.getInstance().get(Calendar.YEAR) - dob
+        val age:Int = cur - yob
 
         // Display age in the text view
         ageView.text = "Your age is $age"
