@@ -9,7 +9,7 @@
     tools:layout_editor_absoluteX="0dp">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/dob"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
@@ -25,7 +25,7 @@
         tools:layout_constraintTop_creator="1" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/ageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -35,19 +35,20 @@
         android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="108dp"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintHorizontal_bias="0.502"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toBottomOf="@+id/dob" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buFindAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Get My Age"
         android:background="@color/colorPrimary"
+        android:onClick="findAge"
+        android:text="Get My Age"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="104dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.501" />
+        android:layout_marginTop="102dp"
+        app:layout_constraintTop_toBottomOf="@+id/ageView" />
 
 </android.support.constraint.ConstraintLayout>
